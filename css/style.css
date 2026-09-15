@@ -1,0 +1,804 @@
+/* ===== VARIABLES DE MARCA NATIVA ===== */
+:root {
+  --verde-bosque: #285943;
+  --verde-natural: #6F9E73;
+  --beige: #F3EBDD;
+  --terracota: #C97852;
+  --blanco: #FFFFFF;
+  --texto-oscuro: #1e2e24;
+  --sombra: 0 4px 12px rgba(40, 89, 67, 0.08);
+  --radio: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--beige);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER / NAV ===== */
+#navbar {
+  background-color: var(--blanco);
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--verde-bosque);
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo a::before {
+  content: "🌿";
+  font-size: 1.6rem;
+}
+
+#main-nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+#main-nav a {
+  text-decoration: none;
+  color: var(--verde-bosque);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+#main-nav a:hover,
+#main-nav a.current {
+  color: var(--terracota);
+}
+
+.btn-cta {
+  background-color: var(--verde-bosque);
+  color: var(--blanco) !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-cta:hover {
+  background-color: var(--terracota) !important;
+  color: var(--blanco) !important;
+  transform: scale(1.03);
+}
+
+/* ===== HERO ===== */
+#showcase-home {
+  background: linear-gradient(135deg, rgba(40, 89, 67, 0.85), rgba(111, 158, 115, 0.7)), url('../img/hero-nativa.jpg') center/cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--blanco);
+  padding: 2rem;
+}
+
+.showcase-banner h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.showcase-banner .subpage {
+  font-size: 3.8rem;
+  color: var(--blanco);
+}
+
+.showcase-banner .large {
+  font-family: 'Lora', serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: var(--beige);
+}
+
+.hero-cta {
+  display: inline-block;
+  background-color: var(--terracota);
+  color: var(--blanco);
+  padding: 0.9rem 2.5rem;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 6px 16px rgba(201, 120, 82, 0.4);
+}
+
+.hero-cta:hover {
+  background-color: #b5653f;
+  transform: translateY(-3px);
+}
+
+/* ===== SECCIÓN BENEFICIOS ===== */
+.benefits {
+  background-color: var(--blanco);
+  padding: 4rem 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.benefit-item {
+  padding: 1.5rem;
+}
+
+.benefit-item i {
+  font-size: 2.5rem;
+  color: var(--verde-natural);
+  margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+  font-size: 1.2rem;
+  color: var(--verde-bosque);
+  margin-bottom: 0.5rem;
+}
+
+.benefit-item p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== PRODUCTO DESTACADO ===== */
+.featured-product {
+  background-color: var(--beige);
+  padding: 4rem 0;
+}
+
+.featured-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.featured-img {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.featured-img img {
+  max-width: 100%;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.featured-text {
+  flex: 1 1 300px;
+}
+
+.featured-text h2 {
+  font-size: 2.2rem;
+  color: var(--verde-bosque);
+  margin-bottom: 1rem;
+}
+
+.featured-text p {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #3a4a3f;
+}
+
+.btn-featured {
+  background-color: var(--verde-bosque);
+  color: var(--blanco);
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+.btn-featured:hover {
+  background-color: var(--terracota);
+}
+
+/* ===== PORTAFOLIO / CATÁLOGO DE PRODUCTOS ===== */
+#portfolio {
+  padding: 4rem 0;
+  background-color: var(--blanco);
+}
+
+.portfolio-nav {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.portfolio-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.portfolio-nav a {
+  text-decoration: none;
+  color: var(--verde-bosque);
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.portfolio-nav a:hover,
+.portfolio-nav a.active {
+  background-color: var(--verde-bosque);
+  color: var(--blanco);
+}
+
+/* ===== TARJETAS DE PRODUCTO ===== */
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(40, 89, 67, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card .card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  color: var(--verde-bosque);
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.product-card .card-cta {
+  display: inline-block;
+  background-color: var(--terracota);
+  color: var(--blanco);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: background 0.3s;
+  align-self: flex-start;
+}
+
+.product-card .card-cta:hover {
+  background-color: var(--verde-bosque);
+}
+
+/* ===== SOBRE NATIVA ===== */
+.about-nativa {
+  background-color: var(--beige);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.about-nativa h2 {
+  font-size: 2.2rem;
+  color: var(--verde-bosque);
+  margin-bottom: 1rem;
+}
+
+.about-nativa p {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  font-family: 'Lora', serif;
+  font-size: 1.05rem;
+  color: #3a4a3f;
+}
+
+/* ===== TESTIMONIO ===== */
+.testimonial {
+  background-color: var(--blanco);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.testimonial blockquote {
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--verde-bosque);
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  position: relative;
+}
+
+.testimonial blockquote::before {
+  content: "“";
+  font-size: 4rem;
+  color: var(--verde-natural);
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  opacity: 0.4;
+}
+
+.testimonial cite {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--terracota);
+}
+
+/* ===== CTA FINAL ===== */
+.final-cta {
+  background: linear-gradient(135deg, var(--verde-bosque), var(--verde-natural));
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--blanco);
+}
+
+.final-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.final-cta p {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--beige);
+}
+
+.final-cta .btn-cta-final {
+  background-color: var(--terracota);
+  color: var(--blanco);
+  padding: 1rem 3rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  transition: background 0.3s, transform 0.2s;
+  display: inline-block;
+}
+
+.final-cta .btn-cta-final:hover {
+  background-color: #b5653f;
+  transform: scale(1.03);
+}
+
+/* ===== FOOTER ===== */
+#main-footer {
+  background-color: var(--verde-bosque);
+  color: var(--beige);
+  padding: 2rem 0;
+}
+
+#main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#main-footer .small {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+#main-footer ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+#main-footer ul a {
+  color: var(--beige);
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+#main-footer ul a:hover {
+  color: var(--terracota);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== HERO SECUNDARIO (contact) ===== */
+#showcase {
+  background: linear-gradient(135deg, rgba(40, 89, 67, 0.85), rgba(111, 158, 115, 0.7)), url('../img/hero-nativa.jpg') center/cover no-repeat;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--blanco);
+  padding: 2rem;
+}
+
+#showcase .subpage {
+  font-size: 3rem;
+  color: var(--blanco);
+}
+
+#showcase .large {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--beige);
+}
+
+/* ===== SECCIÓN CONTACTO ===== */
+#contact {
+  padding: 3rem 0;
+  background-color: var(--beige);
+}
+
+/* Features (dirección, teléfono, correo) */
+.box-contact-features {
+  display: inline-block;
+  width: 30%;
+  margin: 1rem 1.5%;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  vertical-align: top;
+  transition: transform 0.3s;
+}
+
+.box-contact-features:hover {
+  transform: translateY(-5px);
+}
+
+.box-contact-features i {
+  color: var(--verde-natural);
+  margin-bottom: 0.8rem;
+}
+
+.box-contact-features h4 {
+  color: var(--verde-bosque);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.box-contact-features p {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+/* Contenedor mapa + formulario */
+.features-contact {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.features-contact .box-form {
+  flex: 1 1 400px;
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.features-contact .box-form iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border-radius: var(--radio);
+}
+
+/* Formulario */
+#contact-form .form-title {
+  font-size: 1.6rem;
+  color: var(--verde-bosque);
+  margin-bottom: 0.3rem;
+}
+
+#contact-form .form-subtitle {
+  font-family: 'Lora', serif;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.single-form {
+  margin-bottom: 1rem;
+}
+
+.single-form input,
+.single-form select,
+.single-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--texto-oscuro);
+  background-color: var(--blanco);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.single-form input:focus,
+.single-form select:focus,
+.single-form textarea:focus {
+  outline: none;
+  border-color: var(--verde-natural);
+  box-shadow: 0 0 0 3px rgba(111, 158, 115, 0.2);
+}
+
+.single-form textarea {
+  resize: vertical;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Botón del formulario */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-dark {
+  background-color: var(--verde-bosque);
+  color: var(--blanco);
+  width: 100%;
+}
+
+.btn-dark:hover {
+  background-color: var(--terracota);
+  transform: scale(1.02);
+}
+
+/* ===== RESPONSIVE CONTACTO ===== */
+@media (max-width: 900px) {
+  .box-contact-features {
+    width: 47%;
+  }
+}
+
+@media (max-width: 768px) {
+  .box-contact-features {
+    width: 100%;
+    margin: 0.8rem 0;
+  }
+
+  .features-contact {
+    flex-direction: column;
+  }
+
+  #showcase .subpage {
+    font-size: 2.2rem;
+  }
+
+  #showcase .large {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== PÁGINAS DE PRODUCTO (single-project) ===== */
+.single-project {
+  padding: 3rem 0;
+  background-color: var(--beige);
+}
+
+.single-project .container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.single-project .box-portfolio {
+  flex: 1 1 400px;
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 2rem;
+}
+
+.single-project .box-portfolio img {
+  width: 100%;
+  border-radius: var(--radio);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.single-project .box-portfolio h4 {
+  font-size: 1.4rem;
+  color: var(--verde-bosque);
+  margin-bottom: 1rem;
+}
+
+.single-project .box-portfolio p {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #3a4a3f;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.single-project .box-portfolio ul {
+  list-style: none;
+  margin: 1rem 0 1.5rem;
+}
+
+.single-project .box-portfolio ul li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #444;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.single-project .box-portfolio ul li i {
+  color: var(--verde-natural);
+  width: 20px;
+}
+
+/* Botones dentro de single-project */
+.single-project .btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.single-project .btn-dark {
+  background-color: var(--verde-bosque);
+  color: var(--blanco);
+}
+
+.single-project .btn-dark:hover {
+  background-color: var(--terracota);
+  transform: scale(1.03);
+}
+
+.single-project .btn-light {
+  background-color: transparent;
+  color: var(--verde-bosque);
+  border: 2px solid var(--verde-bosque);
+}
+
+.single-project .btn-light:hover {
+  background-color: var(--verde-bosque);
+  color: var(--blanco);
+}
+
+/* Navegación anterior / siguiente */
+.single-project-btn {
+  margin-top: 2rem;
+}
+
+.single-project-btn .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.single-project-btn .hr-small,
+.single-project-btn .hr-small-2 {
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.single-project-btn .next {
+  margin-left: auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .single-project .container {
+    flex-direction: column;
+  }
+
+  .single-project .box-portfolio {
+    padding: 1.5rem;
+  }
+
+  .single-project-btn .container {
+    flex-direction: column;
+  }
+
+  .single-project-btn .hr-small,
+  .single-project-btn .hr-small-2 {
+    display: none;
+  }
+
+  .single-project-btn .prev,
+  .single-project-btn .next {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}
